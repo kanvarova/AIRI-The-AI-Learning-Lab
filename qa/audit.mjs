@@ -57,6 +57,7 @@ check('Q-learning applies a Bellman update and learns a route from experience', 
   assert.ok(/target\-q\[s\]\[a\]/.test(js), 'Q-value update is missing');
   assert.ok(/episode<1200/.test(js), 'Route-training episodes are missing');
   assert.ok(/route=\[\]/.test(js), 'Learned policy is not converted to an executable route');
+  assert.ok(/value-iteration/.test(js) && /Value iteration · V\(start\)/.test(js), 'Value-iteration demonstration is missing');
 });
 check('Quiz has six questions with valid answer indices', () => {
   const section = js.slice(js.indexOf('const questions='), js.indexOf('let qIndex='));
