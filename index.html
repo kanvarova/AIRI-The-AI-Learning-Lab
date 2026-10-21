@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07121d">
+  <meta name="description" content="Explore AI Fundamentals with AIRI through six interactive learning labs.">
+  <title>AIRI — The AI Learning Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div><div class="ambient ambient-two" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="AIRI Learning Lab home"><span class="brand-mark">A</span><span>AIRI<span class="brand-light"> / LEARNING LAB</span></span></a>
+    <nav class="main-nav" aria-label="Main navigation"><a class="nav-link active" href="#home">Mission</a><a class="nav-link" href="#labs">Learning labs</a><a class="nav-link" href="#challenge">Final challenge</a></nav>
+    <div class="top-actions"><span class="status"><i></i> SYSTEM ONLINE</span><button id="reset-progress" class="icon-button" type="button" aria-label="Reset saved progress" title="Reset progress">↻</button></div>
+  </header>
+  <main>
+    <section id="home" class="hero page-section">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> AI FUNDAMENTALS · WEEKS 05—10</div>
+        <h1>Learn how AI<br> <span>learns to think.</span></h1>
+        <p class="hero-text">Six ideas. One curious robot. Your mission is to explore the systems shaping intelligent machines.</p>
+        <div class="hero-buttons"><a class="button primary" href="#labs">Begin the expedition <span>↗</span></a><a class="text-button" href="#challenge">Take the final challenge <span>→</span></a></div>
+        <div class="hero-meta"><span><b>06</b> LEARNING ZONES</span><span class="meta-divider"></span><span><b id="hero-progress">00%</b> EXPEDITION COMPLETE</span></div>
+      </div>
+      <div class="hero-stage" aria-label="AIRI in the AI laboratory">
+        <div class="stage-grid" aria-hidden="true"></div><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="floating-label label-left"><span class="label-icon">⌁</span><span>LEARNING<br><b>IN PROGRESS</b></span></div>
+        <div class="robot-wrap" aria-label="A friendly white robot named AIRI with glowing blue eyes" role="img">
+          <div class="robot-shadow"></div><div class="robot">
+            <div class="antenna"></div><div class="robot-head"><div class="head-panel"></div><div class="ear ear-left"></div><div class="ear ear-right"></div><div class="brow brow-left"></div><div class="brow brow-right"></div><div class="eye eye-left"><i></i></div><div class="eye eye-right"><i></i></div><div class="mouth"></div></div>
+            <div class="neck"></div><div class="robot-body"><div class="shoulder shoulder-left"></div><div class="shoulder shoulder-right"></div><div class="chest-light"></div><span class="airi-label">AIRI</span><div class="body-seam"></div></div><div class="robot-arm arm-left"></div><div class="robot-arm arm-right"></div><div class="robot-base"></div>
+          </div>
+        </div>
+        <div class="floating-label label-right"><span class="pulse-ring"></span><span>AI CORE<br><b>CURIOUS MODE</b></span></div>
+        <div class="stage-caption"><span>FIG 01.</span> YOUR LAB PARTNER, AIRI</div>
+      </div>
+      <div class="hero-bottom"><span>SCROLL TO EXPLORE</span><span class="scroll-line"></span><span>01 / 06</span></div>
+    </section>
+
+    <section id="labs" class="labs-section page-section">
+      <div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> THE EXPEDITION</div><h2>Choose your <span>lab.</span></h2></div><p>Every zone turns a big idea into something you can see, test, and understand.</p></div>
+      <div class="progress-strip"><div><span class="micro-label">MISSION PROGRESS</span><strong id="progress-count">0 <small>/ 6 LABS COMPLETE</small></strong></div><div class="progress-track"><span id="progress-fill"></span></div><span id="progress-percent" class="progress-percent">0%</span></div>
+      <div id="lab-grid" class="lab-grid"></div>
+    </section>
+
+    <section id="lab-detail" class="lab-detail page-section" hidden>
+      <div class="detail-top"><button id="back-to-labs" class="back-button" type="button">← <span>ALL LEARNING LABS</span></button><span id="detail-week" class="micro-label"></span></div>
+      <div class="detail-layout"><div class="detail-copy"><div id="detail-eyebrow" class="eyebrow"><span class="eyebrow-line"></span></div><h2 id="detail-title"></h2><p id="detail-intro" class="detail-intro"></p><div class="learn-card"><span class="micro-label">IN THIS LAB</span><p id="detail-learning"></p></div><div class="airi-note"><div class="mini-airi" aria-hidden="true"><span>•ᴗ•</span></div><p id="airi-dialogue"></p></div></div><div class="activity-panel"><div class="activity-head"><span class="micro-label">HANDS-ON SIMULATION</span><span class="live-dot">LIVE</span></div><div id="activity"></div></div></div>
+    </section>
+
+    <section id="challenge" class="challenge-section page-section">
+      <div class="challenge-art" aria-hidden="true"><div class="challenge-rings"></div><div class="challenge-core">✳</div><span class="orbit-node node-1">P</span><span class="orbit-node node-2">RL</span><span class="orbit-node node-3">NN</span></div>
+      <div class="challenge-copy"><div class="eyebrow"><span class="eyebrow-line"></span> FINAL CHECKPOINT</div><h2>Ready for the<br><span>big picture?</span></h2><p>Connect the ideas from all six labs in one final challenge. No pressure—AIRI will explain every answer.</p><button id="start-quiz" class="button primary" type="button">Start the challenge <span>↗</span></button></div>
+    </section>
+    <section id="quiz" class="quiz-section page-section" hidden><div class="quiz-shell"><div class="quiz-top"><span class="micro-label">FINAL CHALLENGE · <span id="quiz-number">01</span> / 06</span><button id="exit-quiz" class="back-button" type="button">✕ <span>EXIT</span></button></div><div class="quiz-progress"><span id="quiz-progress-fill"></span></div><h2 id="quiz-question"></h2><div id="quiz-options" class="quiz-options"></div><div id="quiz-feedback" class="quiz-feedback" aria-live="polite"></div><button id="quiz-next" class="button primary" type="button" hidden>Continue <span>→</span></button></div></section>
+    <section id="completion" class="completion page-section" hidden><div class="completion-badge">✦</div><div class="eyebrow"><span class="eyebrow-line"></span> EXPEDITION COMPLETE</div><h2>Look how far<br><span>you've come.</span></h2><p id="completion-message">AIRI is proud of your progress. Keep exploring any lab whenever you like.</p><a class="button primary" href="#labs">Explore the labs again <span>↗</span></a></section>
+  </main>
+  <footer><a class="brand" href="#home"><span class="brand-mark">A</span><span>AIRI<span class="brand-light"> / LEARNING LAB</span></span></a><span>BUILT FOR THE CURIOUS · AI FUNDAMENTALS</span><a href="#home" class="to-top">BACK TO TOP ↑</a></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
+
