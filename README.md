@@ -14,7 +14,7 @@ Then open [http://localhost:8000](http://localhost:8000). Python users can also 
 
 ## QA self-check agent
 
-The repository includes a local QA agent checklist in [`qa/AGENT.md`](qa/AGENT.md) and an executable audit in [`qa/audit.mjs`](qa/audit.mjs). Run:
+The repository includes a local QA agent checklist in [`qa/AGENT.md`](qa/AGENT.md) and an executable audit in [`qa/audit.mjs`](qa/audit.mjs). GitHub Actions runs the audit and JavaScript syntax checks on pushes and pull requests. Run it locally with:
 
 ```bash
 node qa/audit.mjs
@@ -24,7 +24,7 @@ The audit checks required course topics, key interactive controls, accessibility
 
 ## Publish with GitHub Pages
 
-The included GitHub Actions workflow publishes the static site from the `main` branch whenever changes are pushed. In the repository, open **Settings → Pages** and set the source to **GitHub Actions** if it is not selected already. The workflow builds no bundle; it publishes the repository root directly.
+In the repository, open **Settings → Pages** and set the source to **GitHub Actions**. Then run the **Publish static site to GitHub Pages** workflow from the Actions tab. Publishing is manual so a code push does not unexpectedly publish the site. The workflow builds no bundle; it publishes the repository root directly.
 
 ## Project structure
 
