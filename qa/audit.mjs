@@ -53,6 +53,11 @@ check('HMM filter normalizes posterior beliefs', () => {
   assert.ok(Math.abs(posterior.reduce((a, b) => a + b, 0) - 1) < 1e-12);
   assert.ok(/updated\.map\(p=>p\/z\)/.test(js), 'HMM posterior normalization is missing');
 });
+check('Q-learning applies a Bellman update and learns a route from experience', () => {
+  assert.ok(/target\-q\[s\]\[a\]/.test(js), 'Q-value update is missing');
+  assert.ok(/episode<1200/.test(js), 'Route-training episodes are missing');
+  assert.ok(/route=\[\]/.test(js), 'Learned policy is not converted to an executable route');
+});
 check('Quiz has six questions with valid answer indices', () => {
   const section = js.slice(js.indexOf('const questions='), js.indexOf('let qIndex='));
   const count = (section.match(/correct:/g) || []).length;
